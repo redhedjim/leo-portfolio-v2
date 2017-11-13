@@ -1,7 +1,7 @@
 {
-  "name": "react-redux-webpack-boilerplate",
+  "name": "Portfolio-v2",
   "version": "1.0.0",
-  "description": "A boilerplate for webpack-reacr-redux app with an express router",
+  "description": "My updated portfolio page",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/redhedjim/react-redux-webpack-boilerplate.git"
+    "url": "git+https://github.com/redhedjim/leo-portfolio-v2.git"
   },
   "author": "Leo Tucker",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/redhedjim/react-redux-webpack-boilerplate/issues"
+    "url": "https://github.com/redhedjim/leo-portfolio-v2/issues"
   },
-  "homepage": "https://github.com/redhedjim/react-redux-webpack-boilerplate#readme",
+  "homepage": "https://github.com/redhedjim/leo-portfolio-v2#readme",
   "dependencies": {
     "axios": "^0.16.2",
     "body-parser": "^1.18.2",
