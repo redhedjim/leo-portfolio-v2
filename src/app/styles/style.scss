@@ -1,1 +1,352 @@
 /* Styles go here */
+/*
+*IntroSection
+*/
+
+.intro-container {
+background-image: url('../images/asfalt-dark.png');
+color:black;
+height: 100vh;
+width: 100vw;
+
+}
+.intro{
+display: flex;
+min-width: 100%;
+height: 90%
+}
+.intro-left{
+    display: flex;
+    flex:3;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align:left;
+    color: black;
+    flex:1;
+    max-height: 100%;
+    overflow-y: scroll;
+    font-size: 6em; 
+    font-weight: 900;
+    padding-left: 5%;
+    overflow: hidden;
+
+    #intro-text-1, #intro-text-2{
+        opacity: 0;
+        animation: fadein 3s;
+        -webkit-animation: fadein 3s;
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        
+        @keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+    }
+    #intro-text-1{
+        animation-delay: .5s;
+        -webkit-animation-delay: .5s;
+    }
+    #intro-text-2{
+        animation-delay: 1.5s;
+        -webkit-animation-delay: 1.5s;
+
+    }
+}
+.intro-flex div{
+    flex:1;
+    height:100%;
+}
+.intro-right {
+    text-align: center; 
+    height: 100vh;
+    flex:2;
+    margin-top: auto;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column; /* works with row or column */
+    flex-direction: column;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    flex-flow: space-around;
+
+    .intro-header{
+        font-size: 20pt;
+        opacity: 0;
+        animation: fadein 4s;
+        -webkit-animation: fadein 4s;
+        animation-delay: 1.75s;
+        -webkit-animation-delay: 1.75s;
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+              
+        @keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+    }
+    .fa-circle{
+        font-size: 10pt;
+        line-height: 80px;
+    }
+    span{
+        color: red;
+        font-size: 24pt;
+    }
+    .intro-text {
+        width: 80%;
+        max-width: 600px;
+        opacity: 0;
+        text-align: center;
+        font-size: 12pt;
+        animation: fadein 4s;
+        -webkit-animation: fadein 4s;
+        animation-delay: 2s;
+        -webkit-animation-delay: 2s;
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        
+        @keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+    }
+}
+.intro h1{
+font-size:5.5em;
+}
+
+
+.intro-menu {
+    margin-top: auto;
+    width:100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-flow: space-between;
+
+    a{
+        color: red;
+        text-decoration: none;
+    }
+    #intro-link, #project-link, #resume-link, #contact-link{
+        opacity: 0;
+        -webkit-animation: fadein 4s;
+        -webkit-animation-fill-mode: forwards;
+        animation: fadein 4s;
+        animation-fill-mode: forwards;
+        
+        @keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+    }
+    #intro-link{
+        -webkit-animation-delay: 3s;    
+    }
+    #project-link{
+        -webkit-animation-delay: 3.3s;    
+    }
+    #resume-link{
+        -webkit-animation-delay: 3.6s;     
+    }
+    #contact-link{
+        -webkit-animation-delay: 3.9s;      
+    }
+}
+
+
+/* End of intro section */
+
+ h1, h2 {
+   font-family: 'Fjalla One', sans-serif;
+   font-size: 3em
+ }
+ p {
+   font-family: 'Cantarell', sans-serif;
+   opacity:1;
+ }
+ ul {
+   padding:0px;
+   list-style: none;
+   /* border: 1px solid black;*/
+   display: flex;
+   flex:1;
+ }
+ li {
+   /* border: 1px solid black;*/
+   flex: 1;
+   text-align: center;
+ }
+ li a {
+   color: white;
+   text-decoration: none;
+   font-size: 125%;
+ }
+ li a:hover {
+   color: skyblue;
+ }
+ 
+ /*
+ *ProjectSection
+ */
+ 
+ .project-container{
+   /*background: linear-gradient(to bottom, black, lightgrey);*/
+   color:white;
+   height: 100vh;
+   width: 100vw;
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: column; /* works with row or column */
+   flex-direction: column;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+ }
+ .header{
+   display: flex;
+   justify-content: center;  
+   flex-direction: column;
+   height: 60vh;
+   text-align: center;
+   box-shadow: inset  0  8px 16px -8px rgba(0, 0, 0, 0.9), inset  0  22px 40px -8px rgba(0, 0, 0, 0.19),
+   inset  0 -8px 16px -8px rgba(0, 0, 0, 0.9), inset 0 -22px 40px -8px rgba(0, 0, 0, 0.19);
+   color:#5E3448;
+   /*background-color:#e5e5e5;*/
+   
+   font-size: 2.4em;
+ }
+ .header h2{
+   margin: 0;
+ }
+ .project-card{
+   display: flex;
+   width: 100%;
+   height: 100%;
+   /*background: linear-gradient( #474def, #4d53f2, #363aaf);*/
+     background-image: url('../images/Elegant_Background-3.jpg');
+   background-size:cover;
+ 
+   color:black;
+ }
+ .project-name {
+   font-size: 2.5em;
+   font-family: 'Fjalla One', sans-serif;
+ }
+ .project-description {
+   font-family: 'Cantarell', sans-serif;
+   color: white;
+ }
+ 
+ .project-overview{
+   flex: 1;
+   border-right: 2px solid white;
+ }
+ .project-details{
+   flex:1;
+   display: flex;
+   flex-direction: column;
+   /*border: 1px solid white;*/
+ }
+ .project-image{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+ }
+ .project-image img{ 
+   max-width: 75%;
+ }
+ .project-item{
+   /*border: 1px solid black;*/
+   padding: 0 10px 0 10px;
+   flex:1;
+ }
+ .item-details{
+   padding: 0 10px 0 10px;
+ }
+ 
+ /*
+ *ResumeSection
+ */
+ 
+ .resume-card {
+    background-image: url('../images/Elegant_Background-5.jpg');
+    background-size:cover;
+    /*background-color: #FB6648;*/
+    color:white;
+    height: 100vh;
+    width: 100vw;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column; /* works with row or column */
+    flex-direction: column;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+ }
+ 
+ /*
+ *ContactSection
+ */
+ 
+ .contact-card {
+    background-color: #5E3448;
+    color:white;
+    height: 40vh;
+    width: 100vw;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column; /* works with row or column */
+    flex-direction: column;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+ }
+ 
+ #contact-header{
+   flex: 1;
+   display: flex;
+   width: 100%;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+ }
+ #contact-body{
+   width:100%;
+   flex: 2;
+   display: flex;
+   flex-direction: row;
+ }
+ .social-media{
+   flex:1;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+ }
+ .social-media-icon{
+   display: flex;
+   align-items: center;
+   max-height: 100%;
+   max-width: 100%;
+   flex-direction: row;
+   align-items:center
+ }
+ img.social-media-icon{
+   max-height: 100px;
+   max-width: 100px;
+ }
+ .contact-text p{
+   color: black;
+ }
+ 
+ 
+ 
+
