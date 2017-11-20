@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import projectList from '../projectDetails';
 import ProjectTile from './projectTile';
-import Project from './project';
+import ProjectDetails from './projectDetails';
 import { setActiveProject } from '../actions/projectActions';
 
 class ProjectCard extends Component {
@@ -14,9 +14,7 @@ class ProjectCard extends Component {
     this.props.setActiveProject(id);
   }
   render() {  
-    const { activeProject } = this.props;  
-    console.log('Active project: ', activeProject);
-    
+    const { activeProject } = this.props;      
     const projects = projectList.map(project => (
       <ProjectTile 
         key={project.id}
@@ -26,7 +24,7 @@ class ProjectCard extends Component {
     ));
     return (
       <div className="project-card">
-        {Object.keys(activeProject).length !== 0 ? <Project project={this.props.activeProject} /> : projects}
+        {Object.keys(activeProject).length !== 0 ? <ProjectDetails project={this.props.activeProject} /> : projects}
       </div>
     );
   }

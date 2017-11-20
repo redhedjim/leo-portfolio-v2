@@ -13,36 +13,16 @@ class ProjectTile extends Component {
   }
   render() {
     const project = this.props.project;
-    const styles = {
-      tile: {
-        backgroundImage: `url(${project.image})`,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'flex-end',
-      },
-      hover: {
-        color: 'black',      
-      },
-      textBox: {
-        
-      },
-    };
-    const { tile, hover, textBox, textBoxHover } = styles;
+    const { background } = project.colors;
     const logos = project.logos.map(logo => <img key={logo} className="logo" src={logo} />);
     return (
       <div
+        style={{ backgroundColor: background }}
         className="project-tile"
-        style={this.state.hover ? hover : tile} 
-        onMouseEnter={this.toggleHover} 
-        onMouseLeave={this.toggleHover} 
-        onClick={() => this.props.onClick(project.id)} 
+        onClick={() => this.props.onClick(project.id)}
       >
-        <div className="text-box">
-          <p className="tile-title">{project.title}</p>
-          <div className="tile-text-details">
-            {logos}
-          </div>
-        </div>
+        {project.title}
+        <div className="logo-container">{logos}</div>
       </div>
     );
   }

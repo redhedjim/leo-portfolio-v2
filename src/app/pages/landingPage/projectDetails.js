@@ -3,7 +3,7 @@ import webpackLogo from '../../images/logos/logo-webpack.svg';
 import reduxLogo from '../../images/logos/logo-redux.svg';
 import backboneLogo from '../../images/logos/logo-backbone.svg';
 import nodeLogo from '../../images/logos/logo-node.png';
-import mysqlLogo from '../../images/logos/logo-mysql.svg';
+import mysqlLogo from '../../images/logos/logo-mysql.png';
 import materialLogo from '../../images/logos/logo-material.svg';
 import railsLogo from '../../images/logos/logo-rails.png';
 import merakiLogo from '../../images/logos/logo-meraki.jpg';
@@ -21,39 +21,120 @@ import s3Logo from '../../images/logos/logo-s3.png';
 import knexLogo from '../../images/logos/logo-knex.png';
 import mongoLogo from '../../images/logos/logo-mongo.png';
 import herokuLogo from '../../images/logos/logo-heroku.png';
+import firebaseLogo from '../../images/logos/logo-firebase.svg';
 
 const projectData = [
   {      
     id: 9,
     title: 'Meraki CLI GUI', 
     logos: [merakiLogo, htmlLogo, cssLogo], 
-    image: 'http://placekitten.com/g/300/150',    
+    colors: {
+      text: 'white',   
+      background: '#ffcc5c',
+    },
+    image: 'http://placekitten.com/g/300/150',   
+    screenshots: [s3Logo, backboneLogo, reactLogo], 
+    details: `Our team manages the networks of nearly 90 locations. In order to 
+      calculate subnets for each site a small tool was used to interact with a Meraki 
+      API to calculate the information needed for each subnet.
+      
+      This was an application built using an LDAP authenticated Express API to handle 
+      the calls to Meraki and a simple HTML form on the front end. This was hosted on 
+      AWS.`,
+    techStack: ['HTML', 'CSS', 'Node', 'Meraki Dashboard API'],
   },
   {      
     id: 8,
     title: 'Faxer', 
     logos: [reactReduxMaterialLogo, s3Logo, expressLogo, nodeLogo], 
+    colors: {
+      text: 'white',   
+      background: '#d96459',
+    },
     image: 'http://placekitten.com/g/300/150',    
+    screenshots: [s3Logo, backboneLogo, reactLogo], 
+    details: `Since faxing refuses to die, we figured we’d may hay while the sun 
+    shines and create an online faxing solution. Using Faxer, users can manage 
+    individual faxing accounts with a dedicated fax number. Organizations can 
+    also manage a group of fax number for their employees or departments. 
+    Customers send and receive faxes and are billed monthly based on their plan.
+    
+    
+    The original app was built using PHP. Version 2 was built using a Laravel API. 
+    The fax images are stored on AWS S3 and Phaxio is used as the fax API. 
+    On the client side, React, Redux, Axios and Webpack are used to communicate 
+    with the API. I built the client side code.`,
+    techStack: ['React', 'Redux', 'Axios', 'AWS S3', 'Phaxio API'],
+    
   },
   {      
     id: 7,
     title: 'Orca', 
     logos: [expressLogo, webpackLogo, reactLogo, mongoLogo, herokuLogo], 
-    image: 'http://placekitten.com/g/300/150',    
+    colors: {
+      text: 'white',   
+      background: '#005960',
+    },
+    image: 'http://placekitten.com/g/300/150',   
+    techStack: ['React', 'Redux', 'Axios', 'AWS S3', 'Phaxio API'],
+    details: `According to Public Health Agency of Canada roughly 2,500 people in Canada
+    died in 2016 due to opioid overdoses. Drugs like Naloxone are used to counter the 
+    effects of an opioid overdose but many people are unaware of its existence or 
+    available locations. This mobile app help by showing users in real time where the 
+    nearest Naloxone kit can be found based on their location. The mobile app itself is 
+    built using Ionic framework and will be available on the Apple and Google Play App 
+    stores this month. The backend is a simple Express app using a MongoLabs hosted 
+    mongoDB database. There is also a dashboard for administrative updates and 
+    reporting built using a React front end and an Express backend. The user can 
+    upload a csv of site information and the server will, convert the file to JSON, 
+    update each location with GPS locations via Google API and publish to the database.`,    
+    screenshots: [s3Logo, backboneLogo, reactLogo], 
+    projectLink: 'http://getorca.co/',
   },
   {      
     id: 6,
-    title: 'CASL', 
+    title: 'CASL Project', 
     logos: [mailgunLogo, webpackLogo, reactLogo, reduxLogo, codeshipLogo], 
-    image: 'http://placekitten.com/g/300/150',    
+    colors: {
+      text: 'white',   
+      background: '#f2ae72',
+    },
+    image: 'http://placekitten.com/g/300/150',  
+    details: `Because a client didn’t want to use a mail subscription service like
+     Mailchip, I built a mailing list subscription manager for 80+ company sites 
+     Canada wide. Customers could update their subscription status via email link. 
+     Sure, it was reinventing the wheel, but that’s what we were paid to do.  
+    
+    This consisted of an API that pulled info from a separate internal company API
+     to find user and site information. Via Mailgun the app then emailed the parties 
+     notifying them of subscription status change and removed them from a mailing 
+     list. The front end was built using a custom HTML page. The backend was an 
+     Express app launched on AWS behind a load balancer.`,
+    screenshots: [s3Logo, backboneLogo, reactLogo], 
+    techStack: ['React', 'Redux', 'Webpack', 'Mailgun', 'Codeship'],    
   },
   {
     id: 1,
     title: 'TbTrak', 
     logos: [backboneLogo, nodeLogo, mysqlLogo, awsLogo, knexLogo],   
-    details: `A single page application built on MySQL and Backbone for tracking time and expenses, 
-    creating invoices and managing company contacts.`,
+    colors: {
+      text: 'white',   
+      background: '#223A5E',
+    },
+    details: `TbTrak tracks employee time, active projects and clients, manage 
+    expenses/expense reports and generating invoices based on those items.  Custom 
+    reporting of all billable and non-billable activity can be generated by admin 
+    staff. Due to the custom needs of the company, an out of the box solution 
+    wouldn’t cut it.  
+    
+    The client is built using Backbone.js and jQuery.  The app manages user 
+    permissions and has token based authentication built into the API. The 
+    server-side code is an Express based API using MySQL, Knex.js for schema 
+    building and Bookshelf.js ORM for simple queries.  The more complicated queries 
+    are all custom SQL queries.`,
     image: 'http://placekitten.com/g/300/150',
+    screenshots: [s3Logo, backboneLogo, reactLogo],
+    techStack: ['Backbone', 'jQuery', 'MySQL', 'Knex', 'Bookshelf', 'JWT', 'AWS EC2'],    
     sections: [
       {
         title: 'Description',
@@ -101,10 +182,21 @@ const projectData = [
     id: 2,
     title: 'Pawprint',   
     logos: [reactReduxMaterialLogo, awsLogo, webpackLogo, mysqlLogo, ldapLogo],   
-  
-    details: `Does working with too many spreadsheets throughout too many departments make your head spin? Mine too. This application
-    is the answer to managing a company's multitude of data sources.`,
+    colors: {
+      text: 'white',   
+      background: '#ff6f69',
+    },
+    details: `Using LDAP user authentication, Pawprint is a web app used for managing
+    our client’s active company sites, management personnel and employee contact 
+    information. This was created to replace a bunch of giant Excel spreadsheets. 
+    
+    The app consisted of a Node.js Express API with a MySQL database load balanced and 
+    deployed on AWS. Client-side code was built using React/Redux with ES6 and 
+    transpiled with Webpack. I was the sole developer on this project. All commits and 
+    production updates were tested through Codeship.`,
     image: 'http://placekitten.com/g/300/150',
+    screenshots: [s3Logo, backboneLogo, reactLogo], 
+    techStack: ['React', 'Redux', 'Axios', 'Webpack', 'MySQL', 'Express', 'JWT', 'EC2', 'ELB'],        
     sections: [
       {
         title: 'Description',
@@ -147,10 +239,22 @@ const projectData = [
     id: 3,
     title: 'Hobblit', 
     logos: [railsLogo, bootstrapLogo, htmlLogo, cssLogo],   
-  
-    details: `A hobby enthusiast website built with the sharing economy in mind. The website is no more but 
-    the landing page lives on.`,
+    colors: {
+      text: 'white',   
+      background: '#ffeead',
+    },
+    details: `Hobblit was a startup aimed at pairing people with interesting skills with
+     those who wanted to learn and meet people.  Think Etsy for hobbies. Our small team 
+     of 3 developers created the app from scratch. We had payment portals, user login 
+     and permissions, scheduling and hosted content for users.  Sadly, due to a lack of 
+     funding, Hobblit shut down in early 2017.
+    
+    The web application was built using Ruby on Rails with a custom-built theme.  I did 
+    client-side work in the user sign up, event and login sections of the application.`,
     image: 'http://placekitten.com/g/300/150',
+    screenshots: [s3Logo, backboneLogo, reactLogo],
+    projectLink: 'http://makemoves.work/pages/hobblit_landing_page/html/index.html', 
+    techStack: ['Ruby on Rails', 'HTML', 'CSS', 'PostgreSQL'],        
     sections: [
       {
         title: 'Description',
@@ -183,11 +287,22 @@ const projectData = [
   },
   {
     id: 4,
-    title: 'Rails App',    
+    title: 'Rails Twitter Clone',    
     logos: [railsLogo, mailgunLogo, bootstrapLogo, herokuLogo],   
-  
-    details: 'One of my early dives into Ruby on Rails.  This application is a Twitter clone of sorts.  Pardon the lack of styling.',
+    colors: {
+      text: 'white',   
+      background: '#f2e394',
+    },
+    details: `One of my early dives into Ruby on Rails.  This application is a 
+    Twitter-esque clone. A user can sign up for an account, make posts, follow other users,
+    and reset their password if forgotten. This was an attempt to build 
+    
+    The app is built on Ruby on Rails with a PostgreSQL DB and hosted on Heroku.  It takes
+    a bit to load as it is on the free plan. Patience is a virtue. Pardon the lack of styling.`,
     image: 'http://placekitten.com/g/300/150',
+    screenshots: [s3Logo, backboneLogo, reactLogo], 
+    projectLink: 'https://dry-caverns-8224.herokuapp.com/',
+    techStack: ['Ruby on Rails', 'Mailgun', 'PostgreSQL', 'Heroku'],        
     sections: [
       {
         title: 'Description',
@@ -225,16 +340,26 @@ const projectData = [
   {
     id: 5,
     title: 'Goof off website',  
-    logos: [jqueryLogo, htmlLogo, cssLogo],     
-    details: `A mix of various widgets and doodads. Once day I'll consolidate them into a single site. Today is not that day.
-    Most of the app is built with HTML & CSS.  Some Javascript is thrown in for good measure here and there.  
-    My first website built without a template.`,
+    logos: [jqueryLogo, htmlLogo, cssLogo, firebaseLogo],    
+    colors: {
+      text: 'white',   
+      background: '#95DEE3',
+    },
+    details: `Built a long time ago and in galaxy far far away, this website is a
+    mix of various widgets and doodads. I kept it around for the chat style bulletin board
+    widget. It's the chat app you never knew you wanted.
+    The site is custom HTML/CSS/Javascript.  The chat widget is built using firebase
+    and the client updates whenever the database changes. At the bottom you can meet a
+    cute Android.  He is very friendly and built using CSS.`,
     image: 'http://placekitten.com/g/300/150',
+    screenshots: [firebaseLogo, htmlLogo, cssLogo, herokuLogo],     
+    projectLink: 'http://makemoves.work/pages/make-moves/make-moves-index.html',
+    techStack: ['HTML', 'CSS', 'jQuery', 'FIrebase'],    
     sections: [
       {
         title: 'Chat App',
         details: `Learning to use Firebase I've added a (very) basic chat app.
-            User entres their name and their message and it lives on forever in this website.  It's the chat app you never knew you wanted. `,
+            User enters their name and their message and it lives on forever in this website.  It's the chat app you never knew you wanted. `,
       },
       {
             
