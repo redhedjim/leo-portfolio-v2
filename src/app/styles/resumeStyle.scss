@@ -1,0 +1,16 @@
+
+ .resume-card {
+    background-image: url('../images/Elegant_Background-5.jpg');
+    background-size:cover;
+    color:white;
+    height: 100vh;
+    width: 100vw;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column; /* works with row or column */
+    flex-direction: column;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+ }

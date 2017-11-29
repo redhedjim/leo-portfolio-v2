@@ -1,0 +1,51 @@
+.contact-card {
+    background-color: #5E3448;
+    color:white;
+    height: 40vh;
+    width: 100vw;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column; /* works with row or column */
+    flex-direction: column;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+ }
+ 
+ #contact-header{
+   flex: 1;
+   display: flex;
+   width: 100%;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+ }
+ #contact-body{
+   width:100%;
+   flex: 2;
+   display: flex;
+   flex-direction: row;
+ }
+ .social-media{
+   flex:1;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+ }
+ .social-media-icon{
+   display: flex;
+   align-items: center;
+   max-height: 100%;
+   max-width: 100%;
+   flex-direction: row;
+   align-items:center
+ }
+ img.social-media-icon{
+   max-height: 100px;
+   max-width: 100px;
+ }
+ .contact-text p{
+   color: black;
+ }
