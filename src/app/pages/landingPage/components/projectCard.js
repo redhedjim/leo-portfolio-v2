@@ -18,7 +18,7 @@ class ProjectCard extends Component {
     const projects = projectList.map(project => (
       <ProjectTile 
         key={project.id}
-        project={project} 
+        project={project}
         onClick={this.onClick}
       />
     ));

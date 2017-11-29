@@ -40,18 +40,16 @@ class ProjectDetails extends Component {
         <div className="screenshot-container">
           {images}
         </div>
-        <div className="content-container">
-          <div className="project-details-left">
-            <p className="project-link">{projectLink}</p>
-            <p className="project-title">{title}</p>
-            <div className="project-details-logos">{logos}</div>
-          </div>
-          <div className="project-details-right">
-            <p className="project-description">{details}</p>
-            <p className="tech-used-header">Tech used</p>
-            <hr />
-            <ul className="tech-used">{techUsed}</ul>
-          </div>
+        <div className="project-details-left">
+          <p className="project-link">{projectLink}</p>
+          <p className="project-title">{title}</p>
+          <div className="project-details-logos">{logos}</div>
+        </div>
+        <div className="project-details-right">
+          <p className="project-description">{details}</p>
+          <p className="tech-used-header">Tech used</p>
+          <hr />
+          <ul className="tech-used">{techUsed}</ul>
         </div>
       </div>
     );
