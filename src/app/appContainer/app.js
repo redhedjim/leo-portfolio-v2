@@ -15,7 +15,6 @@ class App extends Component {
         {this.props.children}
         <IntroSection />
         <ProjectSection />
-        <ResumeSection />
         <ContactSection />
       </div>
     );

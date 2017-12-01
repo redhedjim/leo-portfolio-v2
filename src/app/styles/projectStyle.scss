@@ -2,14 +2,33 @@
   height: 100%;
   min-height: 100vh;
 }
+.project-header{
+  display: flex;
+  
+  justify-content: center;  
+  flex-direction: column;
+  height: 40vh;
+  text-align: center;
+  box-shadow: inset  0  8px 16px -8px rgba(0, 0, 0, 0.9), inset  0  22px 40px -8px rgba(0, 0, 0, 0.19);
+  // inset  0 -8px 16px -8px rgba(0, 0, 0, 0.9), inset 0 -22px 40px -8px rgba(0, 0, 0, 0.19);
+  color:#5E3448;
+  font-size: 2.4em;
+  @media screen and (max-width: 500px) {
+    font-size: 1.5em;
+  }
+  .header h2{
+    margin: 0;
+  }
+}
 .project-card{
   min-height: 50vh;
   height: 100%;
-  width: 100vw;
+  width: 90vw;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
   grid-auto-rows: 100px;
+  margin: 0 auto 0 auto;
 }
   .project-tile{
     color: white;
@@ -51,28 +70,40 @@
     width: 50px;
     height: auto;
   }
-.project-details{
+  .project-details {
+    background-image: url('../images/asfalt-dark.png');
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+.project-background-container{
+  hr{
+    background-color:white;
+  }
+  color: white;
+  display: grid;
+  grid-template-areas: 
+  "projectHeader projectHeader" 
+  "screenshotContainer screenshotContainer"
+  "projectDetailsLeft projectDetailsRight";
+  grid-template-rows: 100% 100% 100%;
+  grid-template-columns: 1fr 1fr;
+  @media screen and (max-width: 1000px) {
     display: grid;
     grid-template-areas: 
-    "projectHeader projectHeader" 
-    "screenshotContainer screenshotContainer"
-    "projectDetailsLeft projectDetailsRight";
-    grid-template-rows: 100% 100% 100%;
-    grid-template-columns: 1fr 1fr;
-    @media screen and (max-width: 1000px) {
-      display: grid;
-      grid-template-areas: 
-      "projectHeader" 
-      "screenshotContainer"
-      "projectDetailsLeft"
-      "projectDetailsRight";
-      grid-template-rows: repeat(100%);
-      grid-template-columns: 1fr;
-    }
-    flex-direction: column;
-    background-image: url('../images/background-paper.jpeg');
-    font-family: 'Roboto', sans-serif;
+    "projectHeader" 
+    "screenshotContainer"
+    "projectDetailsLeft"
+    "projectDetailsRight";
+    grid-template-rows: repeat(100%);
+    grid-template-columns: 1fr;
+  }
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  background-color: rgba(2, 2, 2, 0.7);
 }
+
 .project-details-header{
   grid-area: projectHeader;
   display: flex;
@@ -86,6 +117,10 @@
     color: red;
   }
 }
+.screenshot-container{
+  grid-area: screenshotContainer;
+}
+
 .screenshot{
   width: 150px;
   height: 150px;
@@ -100,7 +135,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 10px;
+    padding: 15px;
   }
   .project-details-logos{
     display: flex;
@@ -113,7 +148,7 @@
     grid-area: projectDetailsRight;   
     flex-direction: column;
     text-align: center; 
-    padding: 10px;
+    padding: 15px;
     font-size: 16pt; 
     @media screen and (max-height: 1000) {
       height: 100%;

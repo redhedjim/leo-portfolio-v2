@@ -23,6 +23,25 @@ import mongoLogo from '../../images/logos/logo-mongo.png';
 import herokuLogo from '../../images/logos/logo-heroku.png';
 import firebaseLogo from '../../images/logos/logo-firebase.svg';
 
+import tbtrakProject from '../../images/screenshots/screenshots-tbtrak-projects.png';
+import tbtrakTime from '../../images/screenshots/screenshots-tbtrak-time.png';
+import tbtrakReports from '../../images/screenshots/screenshots-tbtrak-reports.png';
+import tbtrakInvoice from '../../images/screenshots/screenshots-tbtrak-invoice.png';
+import tbtrakInvoices from '../../images/screenshots/screenshots-tbtrak-invoices.png';
+import hobblitImage from '../../images/screenshots/screenshots-hobblit-image.png';
+import hobblitCities from '../../images/screenshots/screenshots-hobblit-cities.png';
+import pawprintLogoImage from '../../images/screenshots/screenshots-pawprint-login.png';
+import pawprintStaffListImage from '../../images/screenshots/screenshots-pawprint-stafflist.png';
+import pawprintUserImage from '../../images/screenshots/screenshots-pawprint-user.png';
+import pawprintUnsubscribe from '../../images/screenshots/screenshots-pawprint-unsubscribe.png';
+import faxerLogoImage from '../../images/screenshots/screenshots-faxer-login.png';
+import faxerSendImage from '../../images/screenshots/screenshots-faxer-send.png';
+import faxerFaxesImage from '../../images/screenshots/screenshots-faxer-faxes.png';
+import goofOffChat from '../../images/screenshots/screenshots-goofoff-firebase.png';
+import goofOffSketch from '../../images/screenshots/screenshots-goofoff-sketch.png';
+import goofOffAndroid from '../../images/screenshots/screenshots-goofoff-android.png';
+import railsLogin from '../../images/screenshots/screenshots-rails-login.png';
+
 const projectData = [
   {      
     id: 9,
@@ -33,7 +52,7 @@ const projectData = [
       background: '#ffcc5c',
     },
     image: 'http://placekitten.com/g/300/150',   
-    screenshots: [s3Logo, backboneLogo, reactLogo], 
+    screenshots: [], 
     details: `Our team manages the networks of nearly 90 locations. In order to 
       calculate subnets for each site a small tool was used to interact with a Meraki 
       API to calculate the information needed for each subnet.
@@ -52,7 +71,7 @@ const projectData = [
       background: '#d96459',
     },
     image: 'http://placekitten.com/g/300/150',    
-    screenshots: [s3Logo, backboneLogo, reactLogo], 
+    screenshots: [faxerLogoImage, faxerSendImage, faxerFaxesImage], 
     details: `Since faxing refuses to die, we figured we’d may hay while the sun 
     shines and create an online faxing solution. Using Faxer, users can manage 
     individual faxing accounts with a dedicated fax number. Organizations can 
@@ -88,7 +107,7 @@ const projectData = [
     reporting built using a React front end and an Express backend. The user can 
     upload a csv of site information and the server will, convert the file to JSON, 
     update each location with GPS locations via Google API and publish to the database.`,    
-    screenshots: [s3Logo, backboneLogo, reactLogo], 
+    screenshots: [], 
     projectLink: 'http://getorca.co/',
   },
   {      
@@ -110,7 +129,7 @@ const projectData = [
      notifying them of subscription status change and removed them from a mailing 
      list. The front end was built using a custom HTML page. The backend was an 
      Express app launched on AWS behind a load balancer.`,
-    screenshots: [s3Logo, backboneLogo, reactLogo], 
+    screenshots: [pawprintUnsubscribe], 
     techStack: ['React', 'Redux', 'Webpack', 'Mailgun', 'Codeship'],    
   },
   {
@@ -133,7 +152,7 @@ const projectData = [
     building and Bookshelf.js ORM for simple queries.  The more complicated queries 
     are all custom SQL queries.`,
     image: 'http://placekitten.com/g/300/150',
-    screenshots: [s3Logo, backboneLogo, reactLogo],
+    screenshots: [tbtrakProject, tbtrakTime, tbtrakReports, tbtrakInvoice, tbtrakInvoices],
     techStack: ['Backbone', 'jQuery', 'MySQL', 'Knex', 'Bookshelf', 'JWT', 'AWS EC2'],    
     sections: [
       {
@@ -195,7 +214,7 @@ const projectData = [
     transpiled with Webpack. I was the sole developer on this project. All commits and 
     production updates were tested through Codeship.`,
     image: 'http://placekitten.com/g/300/150',
-    screenshots: [s3Logo, backboneLogo, reactLogo], 
+    screenshots: [pawprintLogoImage, pawprintStaffListImage, pawprintUserImage], 
     techStack: ['React', 'Redux', 'Axios', 'Webpack', 'MySQL', 'Express', 'JWT', 'EC2', 'ELB'],        
     sections: [
       {
@@ -238,7 +257,7 @@ const projectData = [
   {
     id: 3,
     title: 'Hobblit', 
-    logos: [railsLogo, bootstrapLogo, htmlLogo, cssLogo],   
+    logos: [htmlLogo, cssLogo, jqueryLogo, bootstrapLogo],   
     colors: {
       text: 'white',   
       background: '#ffeead',
@@ -252,7 +271,7 @@ const projectData = [
     The web application was built using Ruby on Rails with a custom-built theme.  I did 
     client-side work in the user sign up, event and login sections of the application.`,
     image: 'http://placekitten.com/g/300/150',
-    screenshots: [s3Logo, backboneLogo, reactLogo],
+    screenshots: [hobblitCities, hobblitImage, ],
     projectLink: 'http://makemoves.work/pages/hobblit_landing_page/html/index.html', 
     techStack: ['Ruby on Rails', 'HTML', 'CSS', 'PostgreSQL'],        
     sections: [
@@ -295,12 +314,12 @@ const projectData = [
     },
     details: `One of my early dives into Ruby on Rails.  This application is a 
     Twitter-esque clone. A user can sign up for an account, make posts, follow other users,
-    and reset their password if forgotten. This was an attempt to build 
+    and reset their password via email if forgotten.
     
     The app is built on Ruby on Rails with a PostgreSQL DB and hosted on Heroku.  It takes
     a bit to load as it is on the free plan. Patience is a virtue. Pardon the lack of styling.`,
     image: 'http://placekitten.com/g/300/150',
-    screenshots: [s3Logo, backboneLogo, reactLogo], 
+    screenshots: [railsLogin], 
     projectLink: 'https://dry-caverns-8224.herokuapp.com/',
     techStack: ['Ruby on Rails', 'Mailgun', 'PostgreSQL', 'Heroku'],        
     sections: [
@@ -340,7 +359,7 @@ const projectData = [
   {
     id: 5,
     title: 'Goof off website',  
-    logos: [jqueryLogo, htmlLogo, cssLogo, firebaseLogo],    
+    logos: [firebaseLogo, htmlLogo, cssLogo, herokuLogo],    
     colors: {
       text: 'white',   
       background: '#95DEE3',
@@ -352,7 +371,7 @@ const projectData = [
     and the client updates whenever the database changes. At the bottom you can meet a
     cute Android.  He is very friendly and built using CSS.`,
     image: 'http://placekitten.com/g/300/150',
-    screenshots: [firebaseLogo, htmlLogo, cssLogo, herokuLogo],     
+    screenshots: [goofOffChat, goofOffSketch, goofOffAndroid],     
     projectLink: 'http://makemoves.work/pages/make-moves/make-moves-index.html',
     techStack: ['HTML', 'CSS', 'jQuery', 'FIrebase'],    
     sections: [
