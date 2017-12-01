@@ -8,6 +8,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import ReduxPromise from 'redux-promise';
 import thunk from 'redux-thunk';
+import './styles/style.scss';
 import rootReducer from './utils/rootReducer';
 import App from './appContainer/app';
 import requireAuth from './utils/requireAuth';

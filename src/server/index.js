@@ -24,6 +24,6 @@ if (process.env.NODE_ENV !== 'production') {
   });
 }
 const PORT = process.env.PORT || 8000;
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Welcome to Orca! Magic happens on port ${PORT}!`);
 });
