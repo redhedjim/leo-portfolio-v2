@@ -8,6 +8,7 @@
     "clean": "rm -rf ./dist/",
     "build": "webpack -p",
     "postinstall": "npm run clean && npm run build && NODE_ENV=production",
+    "start": "node ./server/index",
     "dev": "webpack-dev-server"
   },
   "repository": {
