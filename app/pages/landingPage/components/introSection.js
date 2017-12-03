@@ -29,7 +29,6 @@ const IntroSection = () => (
       <ul>
         <li id="intro-link"><a href="#intro-top" className="title">Home</a></li>
         <li id="project-link"><a href="#project-top" className="title">Projects</a></li>
-        <li id="resume-link"><a href="#resume-top" className="title">Resume</a></li>
         <li id="contact-link"><a href="#contact-top" className="title">Contact</a></li>
       </ul>
     </div>
