@@ -31,23 +31,23 @@
     align-items: center;
     text-align:left;
     font-size: 6em; 
-    font-weight: 900;
-    
-        @media screen and (min-width: 1500px) {
-            font-size: 7em;
-            div{
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                height: 500px;
-            }
-
+    font-weight: 900;  
+    @media screen and (min-width: 1500px) {
+        font-size: 7em;
+        div{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 500px;
         }
+    }
     #intro-text-1, #intro-text-2{
         @keyframes fadein {
             from { opacity: 0; }
             to   { opacity: 1; }
         }
+        // font-family: 'Montserrat', sans-serif;
+        font-family: 'Open Sans', sans-serif;        
         opacity: 0;
         animation: fadein 3s;
         -webkit-animation: fadein 3s;
@@ -67,7 +67,6 @@
 .intro-right{
     grid-area: introRight;
     display: flex;
-    text-align: center;    
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -80,8 +79,10 @@
             from { opacity: 0; }
             to   { opacity: 1; }
         }
+        text-align: center;
+        width: 100%;
         font-size: 20pt;
-        font-weight: 900;
+        font-weight: 1000;
         opacity: 0;
         animation: fadein 4s;
         animation-delay: 1.75s;
@@ -91,8 +92,7 @@
         -webkit-animation-fill-mode: forwards; 
         @media screen and (min-width: 1500px) {
             font-size: 32pt;
-            letter-spacing: 2px;
-            
+            letter-spacing: 2px;          
         }          
     }
     .fa-circle{
@@ -122,10 +122,10 @@
             from { opacity: 0; }
             to   { opacity: 1; }
         }
+        text-align: justify;        
         opacity: 0;
         width: 80%;
         max-width: 600px;
-        text-align: center;
         font-size: 18pt;
         animation: fadein 4s;
         -webkit-animation: fadein 4s;
@@ -187,113 +187,3 @@
         -webkit-animation-delay: 3.9s;      
     }
 }
-
-// .intro-left{
-//     border: solid 1px blue;   
-//     grid-area: introLeft;
-//     grid-column: 1;
-// // display: flex;
-// // flex:3;
-// // flex-direction: row;
-// // justify-content: center;
-// // align-items: center;
-// // text-align:left;
-// // color: black;
-// // flex:1;
-// // max-height: 100%;
-// // overflow-y: scroll;
-// // font-size: 6em; 
-// // font-weight: 900;
-// // padding-left: 5%;
-// // overflow: hidden;
-
-//     #intro-text-1, #intro-text-2{
-//         // opacity: 0;
-//         // animation: fadein 3s;
-//         // -webkit-animation: fadein 3s;
-//         // animation-fill-mode: forwards;
-//         // -webkit-animation-fill-mode: forwards;
-        
-//         // @keyframes fadein {
-//         //     from { opacity: 0; }
-//         //     to   { opacity: 1; }
-//         // }
-//     }
-//     #intro-text-1{
-//         animation-delay: .5s;
-//         -webkit-animation-delay: .5s;
-//     }
-//     #intro-text-2{
-//         animation-delay: 1.5s;
-//         -webkit-animation-delay: 1.5s;
-//     }
-// }
-// .intro-right {
-//     grid-column: 2;
-//     border: solid 1px lightblue;       
-//     grid-area: introRight;
-    
-//     // text-align: center; 
-//     // height: 100vh;
-//     // flex:2;
-//     // margin-top: auto;
-//     // display: -webkit-flex;
-//     // display: flex;
-//     // -webkit-flex-direction: column; /* works with row or column */
-//     // flex-direction: column;
-//     // -webkit-align-items: center;
-//     // align-items: center;
-//     // -webkit-justify-content: center;
-//     // justify-content: center;
-//     // flex-flow: space-around;
-
-//     .intro-header{
-//         font-size: 20pt;
-//         // opacity: 0;
-//         // animation: fadein 4s;
-//         // -webkit-animation: fadein 4s;
-//         // animation-delay: 1.75s;
-//         // -webkit-animation-delay: 1.75s;
-//         // animation-fill-mode: forwards;
-//         // -webkit-animation-fill-mode: forwards;
-            
-//         // @keyframes fadein {
-//         //     from { opacity: 0; }
-//         //     to   { opacity: 1; }
-//         // }
-//     }
-//     .fa-circle{
-//         font-size: 10pt;
-//         line-height: 80px;
-//     }
-//     span{
-//         color: red;
-//         font-size: 24pt;
-//     }
-//     .intro-text {
-//         // width: 80%;
-//         // max-width: 600px;
-//         // // opacity: 0;
-//         // text-align: center;
-//         font-size: 12pt;
-//         // animation: fadein 4s;
-//         // -webkit-animation: fadein 4s;
-//         // animation-delay: 2s;
-//         // -webkit-animation-delay: 2s;
-//         // animation-fill-mode: forwards;
-//         // -webkit-animation-fill-mode: forwards;
-        
-//         // @keyframes fadein {
-//         //     from { opacity: 0; }
-//         //     to   { opacity: 1; }
-//         // }
-//     }
-// }
-// .intro-flex div{
-//     flex:1;
-//     // height:100%;
-// }
-
-// .intro h1{
-//     font-size:5.5em;
-// }

@@ -5,7 +5,7 @@ class ProjectSection extends Component {
   render() {    
     return (
       <div id="project-top">
-        <div className="project-header"><h2>Projects</h2></div>
+        <div className="project-header title"><h2>Projects</h2></div>
         <ProjectCard />
       </div>
     );

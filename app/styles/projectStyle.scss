@@ -1,10 +1,8 @@
 .project-top{
   height: 100%;
-  min-height: 100vh;
 }
 .project-header{
   display: flex;
-  
   justify-content: center;  
   flex-direction: column;
   height: 40vh;
@@ -16,13 +14,9 @@
   @media screen and (max-width: 500px) {
     font-size: 1.5em;
   }
-  .header h2{
-    margin: 0;
-  }
 }
 .project-card{
-  min-height: 50vh;
-  height: 100%;
+  min-height: 100%;
   width: 90vw;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -30,53 +24,54 @@
   grid-auto-rows: 100px;
   margin: 0 auto 0 auto;
 }
-  .project-tile{
-    color: white;
-    font-size: 28pt;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    transition: all .35s ease-in;
-  }
-  .project-link a{
-    color: white;
-    font-size: 24pt;
-    text-decoration: none;
-  }
-  .project-link a:hover{
-    color: blue;
-  }
-  .project-title{
-    font-size: 48pt;
-  }
-  .project-tile:hover{
-    color: black;
-    justify-content: space-between;
-    background-color: white !important;
-    cursor: pointer;
-  }
-  .logo-container{
-    display: none;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-around;
-    width: 100%;
-  }
-  .project-tile:hover .logo-container{
-    display: flex !important;
-  }
-  .logo{
-    width: 50px;
-    height: auto;
-  }
-  .project-details {
-    background-image: url('../images/asfalt-dark.png');
-    max-width: 1500px;
-    margin-left: auto;
-    margin-right: auto;
-    
-  }
+.project-tile{
+  color: white;
+  font-size: 28pt;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  transition: all .35s ease-in;
+  height: 300px;
+  margin: 2px;
+}
+.project-link a{
+  color: white;
+  font-size: 24pt;
+  text-decoration: none;
+}
+.project-link a:hover{
+  color: blue;
+}
+.project-title{
+  font-size: 48pt;
+}
+.project-tile:hover{
+  color: black;
+  justify-content: space-between;
+  background-color: white !important;
+  cursor: pointer;
+}
+.logo-container{
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  width: 100%;
+}
+.project-tile:hover .logo-container{
+  display: flex !important;
+}
+.logo{
+  width: 50px;
+  height: auto;
+}
+.project-details {
+  background-image: url('../images/Elegant_Background-17.jpg');
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto; 
+}
 .project-background-container{
   hr{
     background-color:white;
@@ -168,5 +163,4 @@
     height: 100px;
     margin-left: auto;
     margin-right: auto;
-    max-width: 400px;
   }
