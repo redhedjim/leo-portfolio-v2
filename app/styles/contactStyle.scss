@@ -1,11 +1,14 @@
+.contact-top{
+  background-attachment: fixed;
+  background-position: center;
+  height: 100%;
+}
 .contact-header{
   display: flex;
   justify-content: center;  
   flex-direction: column;
   height: 40vh;
   text-align: center;
-  // box-shadow: inset  0  8px 16px -8px rgba(0, 0, 0, 0.9), inset  0  22px 40px -8px rgba(0, 0, 0, 0.19);
-  // inset  0 -8px 16px -8px rgba(0, 0, 0, 0.9), inset 0 -22px 40px -8px rgba(0, 0, 0, 0.19);
   color:#5E3448;
   font-size: 2.4em;
   @media screen and (max-width: 500px) {
