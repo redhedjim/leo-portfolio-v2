@@ -7,6 +7,7 @@ import rookieUpLogo from '../../../images/logos/logo-rookieupBlack.jpg';
 
 const ContactCard = () => (
   <div className="contact-card">
+    <div className="header contact-header title"><h2>Contact</h2></div>
     <div id="contact-body">
       <div className="social-media"><a href="http://www.github.com/redhedjim"><img role="presentation" className="img-responsive social-media-icon" src={githubLogo} /></a></div>
       <div className="social-media"><a href="mailto:jamesleotucker@gmail.com"><img role="presentation" className="img-responsive social-media-icon" src={emailLogo} /></a></div>

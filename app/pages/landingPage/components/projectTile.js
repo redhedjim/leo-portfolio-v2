@@ -16,7 +16,8 @@ class ProjectTile extends Component {
     const { background } = project.colors;
     const logos = project.logos.map(logo => <img key={logo} className="logo" src={logo} />);
     return (
-      <div
+      <div 
+        role="presentation"
         style={{ backgroundColor: background }}
         className="project-tile"
         onClick={() => this.props.onClick(project.id)}
